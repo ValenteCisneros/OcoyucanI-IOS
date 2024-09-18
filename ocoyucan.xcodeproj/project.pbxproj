@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A3A67F62C9B38DA00489D0C /* blanca.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A67F52C9B38DA00489D0C /* blanca.jpeg */; };
+		0A3A67F82C9B38DF00489D0C /* morada.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A67F72C9B38DF00489D0C /* morada.jpg */; };
+		0A3A67FA2C9B38E500489D0C /* tamarindo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A67F92C9B38E500489D0C /* tamarindo.jpeg */; };
+		0A3A67FC2C9B38EA00489D0C /* verdesin.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A67FB2C9B38EA00489D0C /* verdesin.jpeg */; };
+		0A3A68002C9B3D2C00489D0C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A67FF2C9B3D2C00489D0C /* logo.png */; };
+		0A690D8D2C9B348600E18572 /* chileplanta.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0A690D8C2C9B348600E18572 /* chileplanta.jpeg */; };
+		0A690D8F2C9B34B800E18572 /* plantaamarilla.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A690D8E2C9B34B800E18572 /* plantaamarilla.jpg */; };
 		0AA923DC2C7CF49700CEA845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA923DB2C7CF49700CEA845 /* AppDelegate.swift */; };
 		0AA923DE2C7CF49700CEA845 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA923DD2C7CF49700CEA845 /* SceneDelegate.swift */; };
 		0AA923E02C7CF49700CEA845 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA923DF2C7CF49700CEA845 /* ViewController.swift */; };
@@ -16,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A3A67F52C9B38DA00489D0C /* blanca.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = blanca.jpeg; path = ../../../../Downloads/blanca.jpeg; sourceTree = "<group>"; };
+		0A3A67F72C9B38DF00489D0C /* morada.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = morada.jpg; path = ../../../../Downloads/morada.jpg; sourceTree = "<group>"; };
+		0A3A67F92C9B38E500489D0C /* tamarindo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tamarindo.jpeg; path = ../../../../Downloads/tamarindo.jpeg; sourceTree = "<group>"; };
+		0A3A67FB2C9B38EA00489D0C /* verdesin.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = verdesin.jpeg; path = ../../../../Downloads/verdesin.jpeg; sourceTree = "<group>"; };
+		0A3A67FF2C9B3D2C00489D0C /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Downloads/logo.png; sourceTree = "<group>"; };
+		0A690D8C2C9B348600E18572 /* chileplanta.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = chileplanta.jpeg; path = ../../../../Downloads/chileplanta.jpeg; sourceTree = "<group>"; };
+		0A690D8E2C9B34B800E18572 /* plantaamarilla.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = plantaamarilla.jpg; path = ../../../../Downloads/plantaamarilla.jpg; sourceTree = "<group>"; };
 		0AA923D82C7CF49700CEA845 /* ocoyucan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ocoyucan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA923DB2C7CF49700CEA845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AA923DD2C7CF49700CEA845 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,8 +75,15 @@
 				0AA923DF2C7CF49700CEA845 /* ViewController.swift */,
 				0AA923E12C7CF49700CEA845 /* Main.storyboard */,
 				0AA923E42C7CF49900CEA845 /* Assets.xcassets */,
+				0A690D8C2C9B348600E18572 /* chileplanta.jpeg */,
 				0AA923E62C7CF49900CEA845 /* LaunchScreen.storyboard */,
 				0AA923E92C7CF49900CEA845 /* Info.plist */,
+				0A690D8E2C9B34B800E18572 /* plantaamarilla.jpg */,
+				0A3A67F52C9B38DA00489D0C /* blanca.jpeg */,
+				0A3A67F72C9B38DF00489D0C /* morada.jpg */,
+				0A3A67F92C9B38E500489D0C /* tamarindo.jpeg */,
+				0A3A67FB2C9B38EA00489D0C /* verdesin.jpeg */,
+				0A3A67FF2C9B3D2C00489D0C /* logo.png */,
 			);
 			path = ocoyucan;
 			sourceTree = "<group>";
@@ -126,7 +147,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AA923E52C7CF49900CEA845 /* Assets.xcassets in Resources */,
+				0A3A67FA2C9B38E500489D0C /* tamarindo.jpeg in Resources */,
+				0A690D8F2C9B34B800E18572 /* plantaamarilla.jpg in Resources */,
+				0A690D8D2C9B348600E18572 /* chileplanta.jpeg in Resources */,
 				0AA923E82C7CF49900CEA845 /* Base in Resources */,
+				0A3A67F82C9B38DF00489D0C /* morada.jpg in Resources */,
+				0A3A68002C9B3D2C00489D0C /* logo.png in Resources */,
+				0A3A67FC2C9B38EA00489D0C /* verdesin.jpeg in Resources */,
+				0A3A67F62C9B38DA00489D0C /* blanca.jpeg in Resources */,
 				0AA923E32C7CF49700CEA845 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +322,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ocoyucan/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "\"We need your location to show your position on the map\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -321,6 +350,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ocoyucan/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "\"We need your location to show your position on the map\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
