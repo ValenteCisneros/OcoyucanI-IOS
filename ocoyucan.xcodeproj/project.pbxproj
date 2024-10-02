@@ -14,6 +14,8 @@
 		0A3A68002C9B3D2C00489D0C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A67FF2C9B3D2C00489D0C /* logo.png */; };
 		0A690D8D2C9B348600E18572 /* chileplanta.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0A690D8C2C9B348600E18572 /* chileplanta.jpeg */; };
 		0A690D8F2C9B34B800E18572 /* plantaamarilla.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A690D8E2C9B34B800E18572 /* plantaamarilla.jpg */; };
+		0AA196C32CADBDB700A9A601 /* PlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA196C22CADBDA700A9A601 /* PlantsViewController.swift */; };
+		0AA196C52CADC48C00A9A601 /* PlantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA196C42CADC45D00A9A601 /* PlantCollectionViewCell.swift */; };
 		0AA923DC2C7CF49700CEA845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA923DB2C7CF49700CEA845 /* AppDelegate.swift */; };
 		0AA923DE2C7CF49700CEA845 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA923DD2C7CF49700CEA845 /* SceneDelegate.swift */; };
 		0AA923E02C7CF49700CEA845 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA923DF2C7CF49700CEA845 /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 		0A3A67FF2C9B3D2C00489D0C /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Downloads/logo.png; sourceTree = "<group>"; };
 		0A690D8C2C9B348600E18572 /* chileplanta.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = chileplanta.jpeg; path = ../../../../Downloads/chileplanta.jpeg; sourceTree = "<group>"; };
 		0A690D8E2C9B34B800E18572 /* plantaamarilla.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = plantaamarilla.jpg; path = ../../../../Downloads/plantaamarilla.jpg; sourceTree = "<group>"; };
+		0AA196C22CADBDA700A9A601 /* PlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsViewController.swift; sourceTree = "<group>"; };
+		0AA196C42CADC45D00A9A601 /* PlantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCollectionViewCell.swift; sourceTree = "<group>"; };
 		0AA923D82C7CF49700CEA845 /* ocoyucan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ocoyucan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA923DB2C7CF49700CEA845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AA923DD2C7CF49700CEA845 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 		0AA923DA2C7CF49700CEA845 /* ocoyucan */ = {
 			isa = PBXGroup;
 			children = (
+				0AA196C42CADC45D00A9A601 /* PlantCollectionViewCell.swift */,
+				0AA196C22CADBDA700A9A601 /* PlantsViewController.swift */,
 				0AA923DB2C7CF49700CEA845 /* AppDelegate.swift */,
 				0AA923DD2C7CF49700CEA845 /* SceneDelegate.swift */,
 				0AA923DF2C7CF49700CEA845 /* ViewController.swift */,
@@ -166,8 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA196C52CADC48C00A9A601 /* PlantCollectionViewCell.swift in Sources */,
 				0AA923E02C7CF49700CEA845 /* ViewController.swift in Sources */,
 				0AA923DC2C7CF49700CEA845 /* AppDelegate.swift in Sources */,
+				0AA196C32CADBDB700A9A601 /* PlantsViewController.swift in Sources */,
 				0AA923DE2C7CF49700CEA845 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

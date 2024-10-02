@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y6z-ai-1a9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="etp-WL-MsX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -92,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="1079" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--Plants View Controller-->
         <scene sceneID="XkG-qF-iQf">
             <objects>
-                <viewController id="etp-WL-MsX" sceneMemberID="viewController">
+                <viewController id="etp-WL-MsX" customClass="PlantsViewController" customModule="ocoyucan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hrW-sk-QRg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,10 +122,70 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.14117647059999999" green="0.4941176471" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hBr-a7-9Q3">
+                                <rect key="frame" x="9.6666666666666572" y="122.33333333333331" width="334.33333333333337" height="607.33333333333348"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9wt-uH-sZX">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="plantCell" id="YL9-iI-pwP" customClass="PlantCollectionViewCell" customModule="ocoyucan" customModuleProvider="target">
+                                        <rect key="frame" x="83.333333333333329" y="0.0" width="168" height="162"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="B0n-ce-aYj">
+                                            <rect key="frame" x="0.0" y="0.0" width="168" height="162"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plantaamarilla.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mwy-0Z-L1e">
+                                                    <rect key="frame" x="5" y="5" width="158" height="152"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="152" id="CJx-RV-Q2a"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="158" id="JFR-9p-Jei"/>
+                                                        <constraint firstAttribute="height" constant="152" id="PIe-8f-s5p"/>
+                                                        <constraint firstAttribute="width" constant="158" id="eCz-Qo-ve6"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="W7Z-US-6lh">
+                                                    <rect key="frame" x="18" y="133" width="48" height="15"/>
+                                                    <color key="backgroundColor" red="0.68973894719999995" green="0.84258943799999997" blue="0.5616384566" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                    <color key="textColor" red="0.14901960780000001" green="0.23137254900000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="mwy-0Z-L1e" secondAttribute="bottom" constant="5" id="5Sa-P0-iUF"/>
+                                                <constraint firstItem="W7Z-US-6lh" firstAttribute="leading" secondItem="B0n-ce-aYj" secondAttribute="leading" constant="18" id="5ix-vG-cNN"/>
+                                                <constraint firstAttribute="bottom" secondItem="W7Z-US-6lh" secondAttribute="bottom" constant="14" id="8Wd-Oe-wdS"/>
+                                                <constraint firstItem="mwy-0Z-L1e" firstAttribute="top" secondItem="B0n-ce-aYj" secondAttribute="top" constant="5" id="oXs-eP-6fp"/>
+                                                <constraint firstAttribute="trailing" secondItem="W7Z-US-6lh" secondAttribute="trailing" constant="102" id="peR-kf-hHY"/>
+                                                <constraint firstAttribute="trailing" secondItem="mwy-0Z-L1e" secondAttribute="trailing" constant="5" id="q8t-LR-XlV"/>
+                                                <constraint firstItem="mwy-0Z-L1e" firstAttribute="leading" secondItem="B0n-ce-aYj" secondAttribute="leading" constant="5" id="t10-Lt-RYT"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageView" destination="mwy-0Z-L1e" id="uuk-cx-W8d"/>
+                                            <outlet property="nameLbl" destination="W7Z-US-6lh" id="3lL-GS-bE1"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QCZ-t0-Ymo"/>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.95686274510000002" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="hBr-a7-9Q3" firstAttribute="height" secondItem="QCZ-t0-Ymo" secondAttribute="height" multiplier="0.8" id="Aj0-XN-Ylz"/>
+                            <constraint firstItem="hBr-a7-9Q3" firstAttribute="centerY" secondItem="hrW-sk-QRg" secondAttribute="centerY" id="PQJ-3Y-vVN"/>
+                            <constraint firstItem="hBr-a7-9Q3" firstAttribute="width" secondItem="QCZ-t0-Ymo" secondAttribute="width" multiplier="0.85" id="eRl-mE-lkQ"/>
+                            <constraint firstItem="hBr-a7-9Q3" firstAttribute="centerX" secondItem="hrW-sk-QRg" secondAttribute="centerX" multiplier="0.9" id="qA7-08-kCb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="hBr-a7-9Q3" id="JRQ-4E-0cw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBP-m5-dJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -345,6 +406,9 @@
         <image name="verdesin.jpeg" width="1536" height="2048"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
