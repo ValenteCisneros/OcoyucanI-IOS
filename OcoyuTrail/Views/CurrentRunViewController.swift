@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CurrentRunViewController.swift
 //  OcoyuTrail
 //
 //  Created by Valente Cisneros Gomez on 30/10/24.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CurrentRunViewController: BaseViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
-
-
+    // MARK: - Navigation
 }
-
