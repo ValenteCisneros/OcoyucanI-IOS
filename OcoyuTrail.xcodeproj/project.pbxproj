@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		0A99B05D2CD308A100F57456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A99B03E2CD3089F00F57456 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A99B0452CD3089F00F57456;
+			remoteInfo = OcoyuTrail;
+		};
+		0A99B0672CD308A100F57456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A99B03E2CD3089F00F57456 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A99B0452CD3089F00F57456;
+			remoteInfo = OcoyuTrail;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A99B0462CD3089F00F57456 /* OcoyuTrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OcoyuTrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A99B05C2CD308A100F57456 /* OcoyuTrailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OcoyuTrailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A99B0662CD308A100F57456 /* OcoyuTrailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OcoyuTrailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0A99B06E2CD308A100F57456 /* Exceptions for "OcoyuTrail" folder in "OcoyuTrail" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0A99B0452CD3089F00F57456 /* OcoyuTrail */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0A99B0482CD3089F00F57456 /* OcoyuTrail */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0A99B06E2CD308A100F57456 /* Exceptions for "OcoyuTrail" folder in "OcoyuTrail" target */,
+			);
+			path = OcoyuTrail;
+			sourceTree = "<group>";
+		};
+		0A99B05F2CD308A100F57456 /* OcoyuTrailTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = OcoyuTrailTests;
+			sourceTree = "<group>";
+		};
+		0A99B0692CD308A100F57456 /* OcoyuTrailUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = OcoyuTrailUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A99B0432CD3089F00F57456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A99B0592CD308A100F57456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A99B0632CD308A100F57456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A99B03D2CD3089F00F57456 = {
+			isa = PBXGroup;
+			children = (
+				0A99B0482CD3089F00F57456 /* OcoyuTrail */,
+				0A99B05F2CD308A100F57456 /* OcoyuTrailTests */,
+				0A99B0692CD308A100F57456 /* OcoyuTrailUITests */,
+				0A99B0472CD3089F00F57456 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A99B0472CD3089F00F57456 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A99B0462CD3089F00F57456 /* OcoyuTrail.app */,
+				0A99B05C2CD308A100F57456 /* OcoyuTrailTests.xctest */,
+				0A99B0662CD308A100F57456 /* OcoyuTrailUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A99B0452CD3089F00F57456 /* OcoyuTrail */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A99B06F2CD308A100F57456 /* Build configuration list for PBXNativeTarget "OcoyuTrail" */;
+			buildPhases = (
+				0A99B0422CD3089F00F57456 /* Sources */,
+				0A99B0432CD3089F00F57456 /* Frameworks */,
+				0A99B0442CD3089F00F57456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0A99B0482CD3089F00F57456 /* OcoyuTrail */,
+			);
+			name = OcoyuTrail;
+			packageProductDependencies = (
+			);
+			productName = OcoyuTrail;
+			productReference = 0A99B0462CD3089F00F57456 /* OcoyuTrail.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0A99B05B2CD308A100F57456 /* OcoyuTrailTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A99B0742CD308A100F57456 /* Build configuration list for PBXNativeTarget "OcoyuTrailTests" */;
+			buildPhases = (
+				0A99B0582CD308A100F57456 /* Sources */,
+				0A99B0592CD308A100F57456 /* Frameworks */,
+				0A99B05A2CD308A100F57456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A99B05E2CD308A100F57456 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0A99B05F2CD308A100F57456 /* OcoyuTrailTests */,
+			);
+			name = OcoyuTrailTests;
+			packageProductDependencies = (
+			);
+			productName = OcoyuTrailTests;
+			productReference = 0A99B05C2CD308A100F57456 /* OcoyuTrailTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0A99B0652CD308A100F57456 /* OcoyuTrailUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A99B0772CD308A100F57456 /* Build configuration list for PBXNativeTarget "OcoyuTrailUITests" */;
+			buildPhases = (
+				0A99B0622CD308A100F57456 /* Sources */,
+				0A99B0632CD308A100F57456 /* Frameworks */,
+				0A99B0642CD308A100F57456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A99B0682CD308A100F57456 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0A99B0692CD308A100F57456 /* OcoyuTrailUITests */,
+			);
+			name = OcoyuTrailUITests;
+			packageProductDependencies = (
+			);
+			productName = OcoyuTrailUITests;
+			productReference = 0A99B0662CD308A100F57456 /* OcoyuTrailUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A99B03E2CD3089F00F57456 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					0A99B0452CD3089F00F57456 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					0A99B05B2CD308A100F57456 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 0A99B0452CD3089F00F57456;
+					};
+					0A99B0652CD308A100F57456 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 0A99B0452CD3089F00F57456;
+					};
+				};
+			};
+			buildConfigurationList = 0A99B0412CD3089F00F57456 /* Build configuration list for PBXProject "OcoyuTrail" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0A99B03D2CD3089F00F57456;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0A99B0472CD3089F00F57456 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A99B0452CD3089F00F57456 /* OcoyuTrail */,
+				0A99B05B2CD308A100F57456 /* OcoyuTrailTests */,
+				0A99B0652CD308A100F57456 /* OcoyuTrailUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A99B0442CD3089F00F57456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A99B05A2CD308A100F57456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A99B0642CD308A100F57456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A99B0422CD3089F00F57456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A99B0582CD308A100F57456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A99B0622CD308A100F57456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A99B05E2CD308A100F57456 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A99B0452CD3089F00F57456 /* OcoyuTrail */;
+			targetProxy = 0A99B05D2CD308A100F57456 /* PBXContainerItemProxy */;
+		};
+		0A99B0682CD308A100F57456 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A99B0452CD3089F00F57456 /* OcoyuTrail */;
+			targetProxy = 0A99B0672CD308A100F57456 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A99B0702CD308A100F57456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OcoyuTrail/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.tec.A01736801.OcoyuTrail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0A99B0712CD308A100F57456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OcoyuTrail/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.tec.A01736801.OcoyuTrail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0A99B0722CD308A100F57456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0A99B0732CD308A100F57456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A99B0752CD308A100F57456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.tec.A01736801.OcoyuTrailTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OcoyuTrail.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OcoyuTrail";
+			};
+			name = Debug;
+		};
+		0A99B0762CD308A100F57456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.tec.A01736801.OcoyuTrailTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OcoyuTrail.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OcoyuTrail";
+			};
+			name = Release;
+		};
+		0A99B0782CD308A100F57456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.tec.A01736801.OcoyuTrailUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OcoyuTrail;
+			};
+			name = Debug;
+		};
+		0A99B0792CD308A100F57456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.tec.A01736801.OcoyuTrailUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OcoyuTrail;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A99B0412CD3089F00F57456 /* Build configuration list for PBXProject "OcoyuTrail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A99B0722CD308A100F57456 /* Debug */,
+				0A99B0732CD308A100F57456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A99B06F2CD308A100F57456 /* Build configuration list for PBXNativeTarget "OcoyuTrail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A99B0702CD308A100F57456 /* Debug */,
+				0A99B0712CD308A100F57456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A99B0742CD308A100F57456 /* Build configuration list for PBXNativeTarget "OcoyuTrailTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A99B0752CD308A100F57456 /* Debug */,
+				0A99B0762CD308A100F57456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A99B0772CD308A100F57456 /* Build configuration list for PBXNativeTarget "OcoyuTrailUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A99B0782CD308A100F57456 /* Debug */,
+				0A99B0792CD308A100F57456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A99B03E2CD3089F00F57456 /* Project object */;
+}
