@@ -48,7 +48,9 @@ class RutaViewController: BaseViewController {
     }
     
     @objc private func startRunning(){
-        print("Start running")
+        let currentRunVc = CurrentRunViewController()
+        currentRunVc.modalPresentationStyle = .fullScreen
+        present(currentRunVc, animated: true)
     }
     
     private func setupViews(){
