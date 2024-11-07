@@ -22,12 +22,23 @@ class RutaViewController: BaseViewController {
         return v
     }()
     
+    private lazy var historyButton: BotonHistorial = {
+        let v = BotonHistorial()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.borderWidth = 5
+        v.borderColor = .white
+        if let logoImage = UIImage(systemName: "location.north.fill") {
+            v.setImage(logoImage, for: .normal)
+        }
+        v.addTarget(self, action: #selector(showHistory), for: .touchUpInside)
+        return v
+    }()
+    
     private lazy var topLabel: UILabel = {
         let v = UILabel()
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
-    
     
     private lazy var mapView: MKMapView = {
         let v = MKMapView()
@@ -37,30 +48,33 @@ class RutaViewController: BaseViewController {
         return v
     }()
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         setupContraints()
-        
     }
     
-    @objc private func startRunning(){
+    @objc private func startRunning() {
         let currentRunVc = CurrentRunViewController()
         currentRunVc.modalPresentationStyle = .fullScreen
         present(currentRunVc, animated: true)
     }
     
-    private func setupViews(){
+    @objc private func showHistory() {
+        let historyVC = HistoryViewController()
+        historyVC.modalPresentationStyle = .fullScreen
+        present(historyVC, animated: true)
+    }
+    
+    private func setupViews() {
         locationManager.checkLocationAuthorization()
         view.addSubview(topLabel)
         view.addSubview(mapView)
         view.addSubview(startButton)
-        
+        view.addSubview(historyButton)
     }
-    private func setupContraints(){
+    
+    private func setupContraints() {
         NSLayoutConstraint.activate([
             topLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             topLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -81,17 +95,23 @@ class RutaViewController: BaseViewController {
             startButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            historyButton.widthAnchor.constraint(equalToConstant: 50),
+            historyButton.heightAnchor.constraint(equalToConstant: 50),
+            historyButton.bottomAnchor.constraint(equalTo: startButton.topAnchor, constant: -5),
+            historyButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 50)
+        ])
     }
 }
 
-extension RutaViewController: MKMapViewDelegate{
+extension RutaViewController: MKMapViewDelegate {
     func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
     }
-        
-    
 }
+
 class UITabBarController : UIViewController{
     
 }

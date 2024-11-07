@@ -292,8 +292,7 @@
 				DEVELOPMENT_TEAM = KBP23BV72V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OcoyuTrail/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location needed for routes";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Para mejorar la experiencia usamos tu ubicación";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Location;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -322,8 +321,7 @@
 				DEVELOPMENT_TEAM = KBP23BV72V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OcoyuTrail/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location needed for routes";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Para mejorar la experiencia usamos tu ubicación";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Location;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

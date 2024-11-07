@@ -18,8 +18,8 @@ class CurrentRunViewController: BaseViewController {
         v.translatesAutoresizingMaskIntoConstraints = false
         v.text = "En Ruta"
         v.textAlignment = .center
-        v.font = v.font.withSize(Self.titleFontSize)
-        v.textColor = .darkGray
+        v.font = UIFont.boldSystemFont(ofSize: Self.subtitleFontSize)
+        v.textColor = .white
         return v
     }()
     
@@ -36,7 +36,7 @@ class CurrentRunViewController: BaseViewController {
         let v = UILabel()
         v.translatesAutoresizingMaskIntoConstraints = false
         v.textColor = .white
-        v.text = "Ritmo Promedio" // cambiar
+        v.text = "Ritmo Promedio" 
         v.font = v.font.withSize(Self.subtitleFontSize)
         return v
     }()
@@ -55,7 +55,7 @@ class CurrentRunViewController: BaseViewController {
         let v = UILabel()
         v.translatesAutoresizingMaskIntoConstraints = false
         v.textColor = .white
-        v.text = "/mts"
+        v.text = "/km"
         v.font = v.font.withSize(Self.subtitleFontSize)
         return v
     }()
@@ -91,7 +91,7 @@ class CurrentRunViewController: BaseViewController {
         let v = UILabel()
         v.translatesAutoresizingMaskIntoConstraints = false
         v.textColor = .white
-        v.text = "mts"
+        v.text = "Km"
         v.font = v.font.withSize(Self.subtitleFontSize)
         return v
     }()
@@ -251,8 +251,9 @@ class CurrentRunViewController: BaseViewController {
         timeElapsed += 1
         timeLabel.text = timeElapsed.formatTimeStrig()
     }
-    private func computePace(time seconds: Int, miles: Double) -> String {
-        pace = Int(Double(seconds) / miles)
+    private func computePace(time seconds: Int, kilometers: Double) -> String {
+        guard kilometers > 0 else { return "0:00" } 
+        pace = Int(Double(seconds) / kilometers)
         return pace.formatTimeStrig()
     }
     @objc private func dismissEnd(sender: UIPanGestureRecognizer) {
@@ -284,10 +285,10 @@ extension CurrentRunViewController: CLLocationManagerDelegate {
             startLocation = locations.first
         }else if let location = locations.last{
             runDistance += endLocation.distance(from: location)
-            self.distanceLabel.text = self.runDistance.meterToMeter().toString(places: 2)
+            self.distanceLabel.text = String(format: "%.2f", self.runDistance.meterToMeter())
             
             if timeElapsed > 0 && runDistance > 0{
-                paceLabel.text = computePace(time: timeElapsed, miles: runDistance.meterToMeter())
+                paceLabel.text = computePace(time: timeElapsed, kilometers: runDistance.meterToMeter())
             }
         }
         endLocation = locations.last

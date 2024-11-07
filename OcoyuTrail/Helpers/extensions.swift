@@ -28,7 +28,7 @@ extension Int{
 extension Double{
     func meterToMeter() -> Double{
         let meters = Measurement(value: self, unit: UnitLength.meters)
-        return meters.converted(to: .meters).value
+        return meters.converted(to: .meters).value / 1000
     }
     
     func toString(places: Int) -> String{

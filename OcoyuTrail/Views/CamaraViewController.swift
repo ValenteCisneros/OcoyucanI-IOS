@@ -7,7 +7,6 @@
 
 import UIKit
 import SwiftUI
-import MapKit
 
 class CamaraViewController: UIViewController {
     
