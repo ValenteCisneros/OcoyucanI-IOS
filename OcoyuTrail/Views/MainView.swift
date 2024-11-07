@@ -33,11 +33,15 @@ struct MainView: View {
                     Image(systemName: "flag.checkered")
                     Text("Rutas")
                 }
-            EventView()
-                .tabItem {
-                    Image(systemName: "list.bullet.rectangle.fill")
-                    Text("Eventos")
-                }
+            if #available(iOS 17.0, *) {
+                EventListView()
+                    .tabItem {
+                        Image(systemName: "list.bullet.rectangle.fill")
+                        Text("Eventos")
+                    }
+            } else {
+                
+            }
         }
         .zIndex(10)
     }

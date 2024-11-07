@@ -43,7 +43,7 @@ class RutaViewController: BaseViewController {
     private lazy var mapView: MKMapView = {
         let v = MKMapView()
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.alpha = 0.5
+        v.alpha = 0.8
         v.delegate = self
         return v
     }()
