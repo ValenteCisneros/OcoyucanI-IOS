@@ -23,24 +23,29 @@ struct EventView: View {
                         .background(Color.secondaryBackground)
                 )
                 .clipShape(.rect(cornerRadius: 25, style: .continuous))
-                .frame(height: 220)
-                .frame(width: 300)
+                .frame(height: 350)
+                .frame(width: 350)
             
             VStack(alignment: .leading) {
                 Text(evento.title)
                     .font(.title)
                     .bold()
+                    .padding(Edge.Set.horizontal, 15)
                 Text(evento.info)
                     .font(.body)
                     .padding(.top, 5)
+                    .padding(Edge.Set.horizontal, 15)
                 Image(evento.imageName)
                     .resizable()
                     .scaledToFit() 
-                    .frame(width: 100, height: 100)
+                    .frame(width: 200, height: 100)
+                    .padding(Edge.Set.horizontal, 15)
+               
             }
             .padding(.horizontal)
         }
         .navigationTitle(evento.title)
+        
     }
 }
 

@@ -9,7 +9,9 @@ import UIKit
 import SwiftUI
 import MapKit
 
-class RutaViewController: BaseViewController {
+class RutaViewController: RutaBar {
+    
+
     private var locationManager = LocationManager()
     
     private lazy var startButton: BotonRuta = {
@@ -52,6 +54,7 @@ class RutaViewController: BaseViewController {
         super.viewDidLoad()
         setupViews()
         setupContraints()
+        setupNavigationBar()
     }
     
     @objc private func startRunning() {
@@ -103,6 +106,16 @@ class RutaViewController: BaseViewController {
             historyButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 50)
         ])
     }
+    private func setupNavigationBar() {
+           
+           let leadingItem = UIBarButtonItem(customView: UIHostingController(rootView: LeadingBarItem()).view)
+           let trailingItem = UIBarButtonItem(customView: UIHostingController(rootView: TrailingBarItem()).view)
+           
+           
+           navigationItem.leftBarButtonItem = leadingItem
+           navigationItem.rightBarButtonItem = trailingItem
+       }
+    
 }
 
 extension RutaViewController: MKMapViewDelegate {
@@ -115,3 +128,5 @@ extension RutaViewController: MKMapViewDelegate {
 class UITabBarController : UIViewController{
     
 }
+
+

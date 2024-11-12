@@ -11,7 +11,8 @@ struct LeadingBarItem: View {
     var body: some View {
         Image("logo")
             .resizable()
-            .frame(width: 80, height: 80)
+            .frame(width: 70, height: 70)
+            .offset(y: -20)
     }
 }
 

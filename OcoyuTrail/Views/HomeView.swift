@@ -11,12 +11,12 @@ struct HomeView: View {
         NavigationView {
             VStack {
                 Color.background.edgesIgnoringSafeArea(.all)
-                Text("Hello World") // Placeholder content
+                Text("Hello World") 
                     .font(.title)
                     .foregroundColor(.primary)
                     .padding()
             }
-            .navigationBarTitleDisplayMode(.large)
+            
             .navigationBarItems(
                 leading: LeadingBarItem(),
                 trailing: TrailingBarItem()

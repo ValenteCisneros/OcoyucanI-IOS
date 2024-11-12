@@ -1,0 +1,6 @@
+framework module Pods_OcoyuTrail {
+  umbrella header "Pods-OcoyuTrail-umbrella.h"
+
+  export *
+  module * { export * }
+}
