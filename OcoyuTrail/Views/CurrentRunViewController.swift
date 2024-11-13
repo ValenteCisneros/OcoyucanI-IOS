@@ -7,6 +7,8 @@
 
 import UIKit
 import CoreLocation
+import RealmSwift
+import ShimmerSwift
 
 class CurrentRunViewController: BaseViewController {
     
@@ -115,7 +117,7 @@ class CurrentRunViewController: BaseViewController {
         return v
     }()
     
-    private lazy var capsuleView: UIView = {
+    private lazy var sliderView: UIView = {
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
         v.backgroundColor = UIColor.black.withAlphaComponent(0.5)
@@ -128,7 +130,7 @@ class CurrentRunViewController: BaseViewController {
         let v = UIImageView()
         v.translatesAutoresizingMaskIntoConstraints = false
         v.isUserInteractionEnabled = true
-        v.image = UIImage(systemName: "dot.arrowtriangles.up.right.down.left.circle")
+        v.image = UIImage(systemName: "arrow.left.and.right.circle")
         v.tintColor = .white
         v.layer.borderColor = UIColor.white.cgColor
         v.layer.borderWidth = 5
@@ -142,10 +144,27 @@ class CurrentRunViewController: BaseViewController {
         v.translatesAutoresizingMaskIntoConstraints = false
         v.image = UIImage(systemName: "stop.circle")
         v.tintColor = .white
-        v.layer.borderColor = UIColor.clear.withAlphaComponent(0.5).cgColor
+        v.layer.borderColor = UIColor.white.cgColor
         v.layer.borderWidth = 5
         v.layer.cornerRadius = 35
         v.layer.masksToBounds = true
+        return v
+    }()
+    
+    private lazy var sliderText: UILabel = {
+        let v = UILabel()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.text = "Desliza y para"
+        v.textColor = .white
+        v.font = v.font.withSize(Self.subtitleFontSize)
+        return v
+    }()
+    
+    private lazy var sliderShimmer: ShimmeringView = {
+        let v = ShimmeringView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.shimmerSpeed = 1
+        v.shimmerPauseDuration = 2
         return v
     }()
     
@@ -155,6 +174,7 @@ class CurrentRunViewController: BaseViewController {
     private var runDistance = 0.0
     private var timeElapsed = 0
     private var pace = 0
+    fileprivate var coordLocations = List<Location>()
     
     private var locationManager =  LocationManager()
     
@@ -171,6 +191,7 @@ class CurrentRunViewController: BaseViewController {
         super.viewDidAppear(animated)
         locationManager.manager.delegate = self
         startRunning()
+        sliderBounceAnimation()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -181,9 +202,15 @@ class CurrentRunViewController: BaseViewController {
     private func setupViews() {
         view.addSubview(toplabel)
         view.addSubview(pageStackView)
-        view.addSubview(capsuleView)
-        capsuleView.addSubview(stopsSliderKnob)
-        capsuleView.addSubview(sliderStop)
+        view.addSubview(sliderView)
+        sliderView.addSubview(stopsSliderKnob)
+        sliderView.addSubview(sliderStop)
+        
+        sliderView.addSubview(sliderText)
+        sliderView.addSubview(sliderShimmer)
+        
+        sliderShimmer.contentView = sliderText
+        sliderShimmer.isShimmering = true
         
         let swipeGesture = UIPanGestureRecognizer(target: self, action: #selector(dismissEnd(sender:)))
         stopsSliderKnob.addGestureRecognizer(swipeGesture)
@@ -204,27 +231,39 @@ class CurrentRunViewController: BaseViewController {
         ])
         
         NSLayoutConstraint.activate([
-            capsuleView.widthAnchor.constraint(equalToConstant: 300),
-            capsuleView.heightAnchor.constraint(equalToConstant: 70),
-            capsuleView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            capsuleView.topAnchor.constraint(equalTo: pageStackView.bottomAnchor, constant: 8),
-            capsuleView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            sliderView.widthAnchor.constraint(equalToConstant: 300),
+            sliderView.heightAnchor.constraint(equalToConstant: 70),
+            sliderView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            sliderView.topAnchor.constraint(equalTo: pageStackView.bottomAnchor, constant: 8),
+            sliderView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            stopsSliderKnob.leadingAnchor.constraint(equalTo: capsuleView.leadingAnchor, constant: 8 ),
-            stopsSliderKnob.centerYAnchor.constraint(equalTo: capsuleView.centerYAnchor),
+            stopsSliderKnob.leadingAnchor.constraint(equalTo: sliderView.leadingAnchor, constant: 8 ),
+            stopsSliderKnob.centerYAnchor.constraint(equalTo: sliderView.centerYAnchor),
             stopsSliderKnob.widthAnchor.constraint(equalToConstant: 50),
             stopsSliderKnob.heightAnchor.constraint(equalToConstant: 50)
             
         ])
         
         NSLayoutConstraint.activate([
-            sliderStop.leadingAnchor.constraint(equalTo: capsuleView.trailingAnchor),
-            sliderStop.centerYAnchor.constraint(equalTo: capsuleView.centerYAnchor),
+            sliderStop.leadingAnchor.constraint(equalTo: sliderView.trailingAnchor),
+            sliderStop.centerYAnchor.constraint(equalTo: sliderView.centerYAnchor),
             sliderStop.widthAnchor.constraint(equalToConstant: 70),
             sliderStop.heightAnchor.constraint(equalToConstant: 70)
             ])
+        
+        NSLayoutConstraint.activate([
+            sliderText.centerXAnchor.constraint(equalTo: sliderView.centerXAnchor),
+            sliderText.centerYAnchor.constraint(equalTo: sliderView.centerYAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            sliderShimmer.leadingAnchor.constraint(equalTo: sliderView.leadingAnchor, constant: 75),
+            sliderShimmer.trailingAnchor.constraint(equalTo: sliderView.trailingAnchor, constant: -75),
+            sliderShimmer.topAnchor.constraint(equalTo: sliderView.topAnchor),
+            sliderShimmer.bottomAnchor.constraint(equalTo: sliderView.bottomAnchor)
+        ])
     }
     
     private func startRunning() {
@@ -264,20 +303,33 @@ class CurrentRunViewController: BaseViewController {
             
             if stopsSliderKnob.center.x > sliderStop.center.x{
                 stopsSliderKnob.center.x = sliderStop.center.x
+                let timeElapsed = self.timeElapsed 
                 stopRun()
+                
+                Run.addRunToRealm(pace: pace, distance: runDistance, duration: timeElapsed, locations: coordLocations)
+                
                 dismiss(animated: true)
-            }else if stopsSliderKnob.center.x < capsuleView.bounds.minX + adjust {
-                stopsSliderKnob.center.x = capsuleView.bounds.minX + adjust
+            }else if stopsSliderKnob.center.x < sliderView.bounds.minX + adjust {
+                stopsSliderKnob.center.x = sliderView.bounds.minX + adjust
             }else{
                 stopsSliderKnob.center.x += translation.x
             }
 
         }else if sender.state == .ended && stopsSliderKnob.center.x < sliderStop.center.x {
             UIView.animate(withDuration: 0.5){
-                self.stopsSliderKnob.center.x = self.capsuleView.bounds.minX + adjust
+                self.stopsSliderKnob.center.x = self.sliderView.bounds.minX + adjust
             }
           }
         }
+    private func sliderBounceAnimation(){
+        UIView.animate(withDuration: 0.5){
+            self.stopsSliderKnob.center.x += 100
+        }completion: { _ in
+            UIView.animate(withDuration: 1, delay: 0.1, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.1, options: .curveEaseInOut){
+                self.stopsSliderKnob.center.x -= 100
+            }completion: { _ in}
+        }
+    }
 }
 extension CurrentRunViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -285,6 +337,8 @@ extension CurrentRunViewController: CLLocationManagerDelegate {
             startLocation = locations.first
         }else if let location = locations.last{
             runDistance += endLocation.distance(from: location)
+            let newLocation = Location(lat: Double(endLocation.coordinate.latitude), long: Double(endLocation.coordinate.longitude))
+            coordLocations.insert(newLocation, at: 0)
             self.distanceLabel.text = String(format: "%.2f", self.runDistance.meterToMeter())
             
             if timeElapsed > 0 && runDistance > 0{

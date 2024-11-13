@@ -98,4 +98,10 @@ final class HistoryTableViewCell: UITableViewCell {
         super.layoutSubviews()
         setupConstraints()
     }
+    
+    func configure(run: Run){
+        totalMeters = run.distance.meterToMeter()
+        totalTime = run.duration.formatTimeStrig()
+        entryDate = run.date.getDateString()
+    }
 }

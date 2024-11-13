@@ -71,7 +71,7 @@ class CamaraViewController: UIViewController {
     private lazy var retakeButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Retake", for: .normal)
+        button.setTitle("Tomar Otra Vez", for: .normal)
         button.backgroundColor = .systemRed
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 10

@@ -25,7 +25,6 @@ class HistoryViewController: BaseViewController {
     private lazy var tableView: UITableView = {
        let v = UITableView()
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.allowsSelection = false //Cambiar despues
         v.delegate = self
         v.dataSource = self
         v.register(HistoryTableViewCell.self, forCellReuseIdentifier: Self.reuseId)
@@ -39,6 +38,11 @@ class HistoryViewController: BaseViewController {
         super.viewDidLoad()
         setupViews()
         setupConstraints()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
     }
     
     private lazy var backButton: UIButton = {
@@ -83,21 +87,31 @@ class HistoryViewController: BaseViewController {
 
 extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return Run.getAllRuns()?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Self.reuseId) as? HistoryTableViewCell else{
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Self.reuseId) as? HistoryTableViewCell,
+              let run = Run.getAllRuns()?[indexPath.row] else{
             return UITableViewCell()
         }
-        cell.totalMeters = Double(indexPath.row)
-        cell.totalTime = "0:23:12"
-        cell.entryDate = "01/01/2024"
+        
+        //llamada a celda
+        cell.configure(run: run)
         return cell
         
     }
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexpath: IndexPath){
+        tableView.deselectRow(at: indexpath, animated: true)
+        
+        guard let run = Run.getAllRuns()?[indexpath.row] else{
+            return
+        }
+        
+        let vc = PreviousRunDetailViewController(run: run)
+        present(vc, animated: true)
+    }
 }
