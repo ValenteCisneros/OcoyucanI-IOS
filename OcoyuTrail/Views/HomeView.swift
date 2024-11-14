@@ -11,7 +11,7 @@ struct HomeView: View {
         NavigationView {
             VStack {
                 Color.background.edgesIgnoringSafeArea(.all)
-                Text("Hello World") 
+                Text("Libreria")
                     .font(.title)
                     .foregroundColor(.primary)
                     .padding()

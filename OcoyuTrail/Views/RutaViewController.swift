@@ -107,14 +107,37 @@ class RutaViewController: RutaBar {
         ])
     }
     private func setupNavigationBar() {
-           
-           let leadingItem = UIBarButtonItem(customView: UIHostingController(rootView: LeadingBarItem()).view)
-           let trailingItem = UIBarButtonItem(customView: UIHostingController(rootView: TrailingBarItem()).view)
-           
-           
-           navigationItem.leftBarButtonItem = leadingItem
-           navigationItem.rightBarButtonItem = trailingItem
-       }
+        // Configurar la apariencia de la barra de navegación
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .systemBackground // O el color que prefieras
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        
+        // Crear los items de la barra de navegación
+        let leadingController = UIHostingController(rootView: LeadingBarItem())
+        let trailingController = UIHostingController(rootView: TrailingBarItem())
+        
+        // Ajustar el tamaño preferido de las vistas
+        leadingController.view.backgroundColor = .clear
+        trailingController.view.backgroundColor = .clear
+        
+        // Crear los UIBarButtonItems
+        let leadingItem = UIBarButtonItem(customView: leadingController.view)
+        let trailingItem = UIBarButtonItem(customView: trailingController.view)
+        
+        // Asignar los items
+        navigationItem.leftBarButtonItem = leadingItem
+        navigationItem.rightBarButtonItem = trailingItem
+        
+        // Ocultar la barra de estado
+        setNeedsStatusBarAppearanceUpdate()
+    }
+
+    // Agregar esto para ocultar la barra de estado
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
 }
 
@@ -124,6 +147,7 @@ extension RutaViewController: MKMapViewDelegate {
         mapView.userTrackingMode = .follow
     }
 }
+
 
 class UITabBarController : UIViewController{
     

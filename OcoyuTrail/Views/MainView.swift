@@ -24,7 +24,7 @@ struct MainView: View {
                         
                     Text("Biblioteca")
                 }
-            CamaraViewControllerWrapper()
+            CamaraView()
                 .tabItem {
                     Image(systemName: "camera")
                     Text("Camara")
