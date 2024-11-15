@@ -7,16 +7,41 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var plantas: [Planta] = []
+    private let db = PlantaDatabase()
+
     var body: some View {
         NavigationView {
             VStack {
                 Color.background.edgesIgnoringSafeArea(.all)
-                Text("Libreria")
+                Text("Librería")
                     .font(.title)
                     .foregroundColor(.primary)
                     .padding()
+                
+                ScrollView {
+                    LazyVGrid(columns: [GridItem(), GridItem()]) {
+                        ForEach(plantas, id: \.id) { planta in
+                            NavigationLink(destination: PlantaDetailView(planta: planta)) {
+                                VStack {
+                                    Image("image\(planta.id)") // Usa nombres secuenciales para las imágenes
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(height: 100)
+                                    Text(planta.nombre)
+                                        .font(.headline)
+                                        .foregroundColor(.primary)
+                                }
+                                .padding()
+                            }
+                        }
+                    }
+                }
+                .padding()
             }
-            
+            .onAppear {
+                self.plantas = db.fetchPlantas()
+            }
             .navigationBarItems(
                 leading: LeadingBarItem(),
                 trailing: TrailingBarItem()
@@ -32,5 +57,6 @@ struct HomeView_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
     }
 }
+
 
 

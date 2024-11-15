@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07DA6BB77E63974505A5B8D4 /* Pods_OcoyuTrail_OcoyuTrailUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAD3D1DE2B0F2740D9D0D78 /* Pods_OcoyuTrail_OcoyuTrailUITests.framework */; };
+		0A1286392CE67E22006CD31E /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 0A1286382CE67E22006CD31E /* SQLite */; };
 		456BEEC3D1420E20C40B0159 /* Pods_OcoyuTrailTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91CFF817E48B4F9C6B99A77 /* Pods_OcoyuTrailTests.framework */; };
 		FB9D7187423BD144B315B355 /* Pods_OcoyuTrail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4571AF41D88184178AC0E263 /* Pods_OcoyuTrail.framework */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A12863D2CE6B82B006CD31E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		0A7678B7C564A526CB2DAD8D /* Pods-OcoyuTrailTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OcoyuTrailTests.debug.xcconfig"; path = "Target Support Files/Pods-OcoyuTrailTests/Pods-OcoyuTrailTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0A99B0462CD3089F00F57456 /* OcoyuTrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OcoyuTrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A99B05C2CD308A100F57456 /* OcoyuTrailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OcoyuTrailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A1286392CE67E22006CD31E /* SQLite in Frameworks */,
 				FB9D7187423BD144B315B355 /* Pods_OcoyuTrail.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +144,7 @@
 		727C1D3A909BE7375684A474 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A12863D2CE6B82B006CD31E /* libsqlite3.tbd */,
 				4571AF41D88184178AC0E263 /* Pods_OcoyuTrail.framework */,
 				ABAD3D1DE2B0F2740D9D0D78 /* Pods_OcoyuTrail_OcoyuTrailUITests.framework */,
 				A91CFF817E48B4F9C6B99A77 /* Pods_OcoyuTrailTests.framework */,
@@ -232,6 +236,7 @@
 				TargetAttributes = {
 					0A99B0452CD3089F00F57456 = {
 						CreatedOnToolsVersion = 16.0;
+						LastSwiftMigration = 1600;
 					};
 					0A99B05B2CD308A100F57456 = {
 						CreatedOnToolsVersion = 16.0;
@@ -252,6 +257,9 @@
 			);
 			mainGroup = 0A99B03D2CD3089F00F57456;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0A1286372CE67DE1006CD31E /* XCRemoteSwiftPackageReference "SQLite" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0A99B0472CD3089F00F57456 /* Products */;
 			projectDirPath = "";
@@ -469,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KBP23BV72V;
@@ -491,6 +500,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mx.tec.A01736801.OcoyuTrail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/OcoyuTrail/Helpers/database/OcoyuTrail-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -502,6 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KBP23BV72V;
@@ -524,6 +536,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mx.tec.A01736801.OcoyuTrail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/OcoyuTrail/Helpers/database/OcoyuTrail-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -760,6 +773,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0A1286372CE67DE1006CD31E /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.15.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0A1286382CE67E22006CD31E /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A1286372CE67DE1006CD31E /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0A99B03E2CD3089F00F57456 /* Project object */;
 }

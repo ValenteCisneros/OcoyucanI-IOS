@@ -29,6 +29,7 @@ import PhotosUI
                         
                         Text("Escanea la Flora")
                             .font(.largeTitle)
+                            .foregroundColor(Color(red: 0.149, green: 0.231, blue: 0.149))
                             .padding()
                         
                         

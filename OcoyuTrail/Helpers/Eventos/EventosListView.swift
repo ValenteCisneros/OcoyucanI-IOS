@@ -50,10 +50,14 @@ struct EventListView: View {
                         }
                     }
                 }
+                .navigationBarItems(
+                    leading: LeadingBarItem(),
+                    trailing: TrailingBarItem())
                 .navigationTitle("Eventos")
                 .navigationBarTitleDisplayMode(.inline)
             }
         }
+        .statusBar(hidden: true)
     }
     
     private func filterEventos() {

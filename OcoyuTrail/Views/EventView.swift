@@ -44,13 +44,12 @@ struct EventView: View {
                     }
                     .padding(.horizontal)
                 }
-                .navigationBarItems(
-                    leading: LeadingBarItem(),
-                    trailing: TrailingBarItem())
+                
                 
             }
-            .statusBar(hidden: true)
+            
         }
+    
 }
 
 
