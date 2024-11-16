@@ -8,39 +8,58 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var plantas: [Planta] = []
-    private let db = PlantaDatabase()
-
+    @State private var searchText: String = ""
+    
+    var filteredPlantas: [Planta] {
+        if searchText.isEmpty {
+            return plantas
+        } else {
+            return plantas.filter { planta in
+                planta.nombre.lowercased().contains(searchText.lowercased()) ||
+                planta.categoria.lowercased().contains(searchText.lowercased())
+            }
+        }
+    }
+    
     var body: some View {
         NavigationView {
             VStack {
-                Color.background.edgesIgnoringSafeArea(.all)
-                Text("Librería")
-                    .font(.title)
-                    .foregroundColor(.primary)
-                    .padding()
+                Text("")
+                    .padding(.top)
+                
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.gray)
+                    TextField("Buscar flora...", text: $searchText)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                }
+                .padding(.horizontal)
+                .padding(.bottom)
                 
                 ScrollView {
-                    LazyVGrid(columns: [GridItem(), GridItem()]) {
-                        ForEach(plantas, id: \.id) { planta in
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
+                        ForEach(filteredPlantas) { planta in
                             NavigationLink(destination: PlantaDetailView(planta: planta)) {
-                                VStack {
-                                    Image("image\(planta.id)") // Usa nombres secuenciales para las imágenes
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(height: 100)
-                                    Text(planta.nombre)
-                                        .font(.headline)
-                                        .foregroundColor(.primary)
-                                }
-                                .padding()
+                                PlantaCard(planta: planta)
                             }
                         }
                     }
+                    .padding()
                 }
-                .padding()
+                
+                if filteredPlantas.isEmpty {
+                    VStack {
+                        Image(systemName: "leaf.fill")
+                            .font(.system(size: 50))
+                            .foregroundColor(.gray)
+                        Text("No se encontraron plantas")
+                            .foregroundColor(.gray)
+                            .padding()
+                    }
+                }
             }
             .onAppear {
-                self.plantas = db.fetchPlantas()
+                self.plantas = PlantaData.getAllPlantas()
             }
             .navigationBarItems(
                 leading: LeadingBarItem(),
@@ -48,6 +67,31 @@ struct HomeView: View {
             )
         }
         .statusBar(hidden: true)
+    }
+}
+
+struct PlantaCard: View {
+    let planta: Planta
+    
+    var body: some View {
+        VStack {
+            Image("\(planta.id)")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 100)
+                .cornerRadius(8)
+            
+            Text(planta.nombre)
+                .font(.system(size: 14, weight: .medium))
+                .foregroundColor(.primary)
+                .lineLimit(2)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 4)
+        }
+        .padding(8)
+        .background(Color.white)
+        .cornerRadius(12)
+        .shadow(radius: 2)
     }
 }
 
