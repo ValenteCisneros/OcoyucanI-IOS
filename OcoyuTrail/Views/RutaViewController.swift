@@ -39,6 +39,7 @@ class RutaViewController: RutaBar {
     private lazy var topLabel: UILabel = {
         let v = UILabel()
         v.translatesAutoresizingMaskIntoConstraints = false
+        v.backgroundColor = UIColor(red: 0.149, green: 0.231, blue: 0.149, alpha: 1)
         return v
     }()
     
@@ -82,13 +83,13 @@ class RutaViewController: RutaBar {
             topLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             topLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             topLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            topLabel.heightAnchor.constraint(equalToConstant: 0)
+            topLabel.heightAnchor.constraint(equalToConstant: 50)
         ])
         
         NSLayoutConstraint.activate([
             mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            mapView.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 8),
+            mapView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             mapView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
         
@@ -110,7 +111,7 @@ class RutaViewController: RutaBar {
         // Configurar la apariencia de la barra de navegación
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .systemBackground // O el color que prefieras
+        appearance.backgroundColor = .secondaryBackground // O el color que prefieras
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
         

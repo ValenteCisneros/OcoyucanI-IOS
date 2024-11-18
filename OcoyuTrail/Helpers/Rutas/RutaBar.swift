@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class RutaBar: UIViewController {
     private lazy var backgroundLayer: GradientView = {
@@ -25,6 +26,7 @@ class RutaBar: UIViewController {
         setupViews()
         setupConstraints()
         setupNavigationBarAppearance()
+        setupNavigationItems()
     }
     
     private func setupViews() {
@@ -40,14 +42,37 @@ class RutaBar: UIViewController {
         ])
     }
     
+
     private func setupNavigationBarAppearance() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = UIColor(red: 0.122, green: 0.235, blue: 0.141, alpha: 1.0)
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationController?.setNavigationBarHidden(false, animated: false)
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor(red: 0.122, green: 0.235, blue: 0.141, alpha: 1.0)
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
+            navigationController?.navigationBar.compactAppearance = appearance
+            navigationController?.navigationBar.isTranslucent = false
+            
+            setupNavigationItems()
+        }
         
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-    }
+    private func setupNavigationItems() {
+            // Crear los controladores para los items SwiftUI
+            let leadingController = UIHostingController(rootView: LeadingBarItem())
+            let trailingController = UIHostingController(rootView: TrailingBarItem())
+            
+            // Configurar el tamaño de las vistas
+            leadingController.view.frame = CGRect(x: 0, y: 0, width: 100, height: 44)
+            trailingController.view.frame = CGRect(x: 0, y: 0, width: 100, height: 44)
+            
+            // Crear los UIBarButtonItems
+            let leadingItem = UIBarButtonItem(customView: leadingController.view)
+            let trailingItem = UIBarButtonItem(customView: trailingController.view)
+            
+            // Asignar los items a la barra de navegación
+            navigationItem.leftBarButtonItem = leadingItem
+            navigationItem.rightBarButtonItem = trailingItem
+        }
 }
